@@ -1,0 +1,14 @@
+function getBooksByAuthor(author, callback) {
+  // Assuming you already have the bookList (e.g., fetched from a database)
+  getBookList((bookList) => {
+    const booksByAuthor = bookList.filter((book) => book.author === author);
+    callback(booksByAuthor);
+  });
+}
+
+// Usage
+const targetAuthor = "Author 1";
+getBooksByAuthor(targetAuthor, (books) => {
+  console.log(`Books by ${targetAuthor}:`);
+  console.log(books);
+});
