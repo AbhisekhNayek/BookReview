@@ -1,0 +1,20 @@
+// Assuming you have a function to fetch the book list from the shop's database
+function getBookList(callback) {
+  // Simulating an asynchronous API call
+  setTimeout(() => {
+    const bookList = [
+      { ISBN: "123456789", title: "Book 1", author: "Author 1" },
+      { ISBN: "987654321", title: "Book 2", author: "Author 2" },
+      { ISBN: "456789123", title: "Book 3", author: "Author 1" },
+      // Add more books as needed
+    ];
+
+    callback(bookList);
+  }, 1000); // Simulating a 1-second delay for fetching data
+}
+
+// Usage
+getBookList((bookList) => {
+  console.log("Available Books:");
+  console.log(bookList);
+});
