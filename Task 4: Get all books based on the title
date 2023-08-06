@@ -1,0 +1,14 @@
+function getBooksByTitle(title, callback) {
+  // Assuming you already have the bookList (e.g., fetched from a database)
+  getBookList((bookList) => {
+    const booksByTitle = bookList.filter((book) => book.title === title);
+    callback(booksByTitle);
+  });
+}
+
+// Usage
+const targetTitle = "Book 1";
+getBooksByTitle(targetTitle, (books) => {
+  console.log(`Books with title "${targetTitle}":`);
+  console.log(books);
+});
