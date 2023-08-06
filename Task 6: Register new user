@@ -1,0 +1,21 @@
+// Assuming you have a function to save the user data to the database
+function registerUser(userData, callback) {
+  // Implement the database interaction to save the user data based on your backend setup
+  // For this example, we'll simulate a user registration
+  setTimeout(() => {
+    // Save the user data to the database here
+    console.log("User registered successfully!");
+    callback();
+  }, 1000); // Simulating a 1-second delay for database interaction
+}
+
+// Usage
+const newUser = {
+  username: "john_doe",
+  email: "john@example.com",
+  password: "password123",
+};
+
+registerUser(newUser, () => {
+  console.log("User registration completed.");
+});
