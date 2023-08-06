@@ -1,0 +1,17 @@
+function getBookReview(ISBN, callback) {
+  // Assuming you have a function to fetch the review from the database
+  // or a separate database table for book reviews
+  // Implement the database interaction based on your backend setup
+  // For this example, we'll simulate a review retrieval
+  setTimeout(() => {
+    const review = "This book is great! Highly recommended.";
+    callback(review);
+  }, 1000); // Simulating a 1-second delay for fetching data
+}
+
+// Usage
+const targetISBNForReview = "123456789";
+getBookReview(targetISBNForReview, (review) => {
+  console.log("Book Review:");
+  console.log(review);
+});
