@@ -1,0 +1,34 @@
+// Assuming you have functions to add and update book reviews in the database
+function addBookReview(ISBN, review, callback) {
+  // Implement the database interaction to add a review based on your backend setup
+  // For this example, we'll simulate adding a review
+  setTimeout(() => {
+    // Save the review to the database here
+    console.log("Review added successfully!");
+    callback();
+  }, 1000); // Simulating a 1-second delay for database interaction
+}
+
+function updateBookReview(ISBN, newReview, callback) {
+  // Implement the database interaction to update a review based on your backend setup
+  // For this example, we'll simulate updating a review
+  setTimeout(() => {
+    // Update the review in the database here
+    console.log("Review updated successfully!");
+    callback();
+  }, 1000); // Simulating a 1-second delay for database interaction
+}
+
+// Usage
+const ISBNForReview = "123456789";
+const reviewToAdd = "This book is great! Highly recommended.";
+
+addBookReview(ISBNForReview, reviewToAdd, () => {
+  console.log("Review added.");
+});
+
+const updatedReview = "Updated review for the book.";
+
+updateBookReview(ISBNForReview, updatedReview, () => {
+  console.log("Review updated.");
+});
