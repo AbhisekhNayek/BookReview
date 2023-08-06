@@ -1,0 +1,18 @@
+function getBookByISBN(ISBN, callback) {
+  // Assuming you already have the bookList (e.g., fetched from a database)
+  getBookList((bookList) => {
+    const book = bookList.find((book) => book.ISBN === ISBN);
+    callback(book);
+  });
+}
+
+// Usage
+const targetISBN = "123456789";
+getBookByISBN(targetISBN, (book) => {
+  if (book) {
+    console.log("Book found:");
+    console.log(book);
+  } else {
+    console.log("Book not found.");
+  }
+});
