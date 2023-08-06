@@ -1,0 +1,5 @@
+const targetTitleForSearch = "Book 1";
+getBooksByTitle(targetTitleForSearch, (books) => {
+  console.log(`Books with title "${targetTitleForSearch}":`);
+  console.log(books);
+});
