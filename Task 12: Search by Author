@@ -1,0 +1,5 @@
+const targetAuthorForSearch = "Author 1";
+getBooksByAuthor(targetAuthorForSearch, (books) => {
+  console.log(`Books by ${targetAuthorForSearch}:`);
+  console.log(books);
+});
