@@ -1,0 +1,29 @@
+function getBookListAsync(callback) {
+  // Simulating an asynchronous API call with async/await
+  setTimeout(() => {
+    const bookList = [
+      { ISBN: "123456789", title: "Book 1", author: "Author 1" },
+      { ISBN: "987654321", title: "Book 2", author: "Author 2" },
+      { ISBN: "456789123", title: "Book 3", author: "Author 1" },
+      // Add more books as needed
+    ];
+
+    callback(bookList);
+  }, 1000); // Simulating a 1-second delay for fetching data
+}
+
+// Usage
+async function getAllBooksAsync() {
+  return new Promise((resolve) => {
+    getBookListAsync((bookList) => {
+      resolve(bookList);
+    });
+  });
+}
+
+// Usage
+(async () => {
+  const allBooks = await getAllBooksAsync();
+  console.log("All Books:");
+  console.log(allBooks);
+})();
